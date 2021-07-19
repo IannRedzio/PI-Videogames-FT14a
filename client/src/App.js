@@ -1,9 +1,19 @@
-import './App.css';
+import React from "react";
+import { Route } from "react-router-dom";
+import "./App.css";
+
+import LandingPage from "./components/LandingPage/LandingPage.jsx";
+import Home from "./containers/Home/Home.jsx";
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Henry Videogames</h1>
+      <React.Fragment>
+        <Route exact path="/" component={LandingPage} />
+
+        <Route exact path="/home" component={Home} />
+      </React.Fragment>
     </div>
   );
 }

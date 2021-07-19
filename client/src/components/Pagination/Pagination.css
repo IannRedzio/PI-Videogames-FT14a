@@ -1,0 +1,21 @@
+.paginate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px ;
+    height: 35px;
+}
+
+.paginate button{
+    background: none;
+    border: none;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.paginate button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    transform-origin: center;
+    text-shadow: 0 0 5px #fff,
+};

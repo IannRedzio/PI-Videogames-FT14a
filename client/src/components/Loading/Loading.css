@@ -1,0 +1,6 @@
+.loading{
+    width: 200px;
+    height: 100%;
+    display: flex;
+	flex-direction: column;
+}
