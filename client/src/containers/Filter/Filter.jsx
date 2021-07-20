@@ -1,21 +1,17 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
 import {
-  getGenres,
   filterByGenre,
   orderByCreator,
   orderAsc,
   orderDesc,
 } from "../../actions/index";
+import useGenres from "../../customHooks/useGenres";
 import "./Filter.css";
 
 export function Filter({ paginate }) {
     const dispatch = useDispatch();
-    const genres = useSelector((store) => store.genres);
-
-    useEffect(() => {
-        dispatch(getGenres());
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    const genres = useGenres();
 
     const handleFilter = (e) => {
         dispatch(filterByGenre(e.target.value));
@@ -42,13 +38,14 @@ export function Filter({ paginate }) {
         }
     };
 
+    
     return (
         <div className="filter">
             <div>
                 <div>Filter by Genre</div>
                 <select onChange={(e) => handleFilter(e)}>
-                    <option default>all</option>
-                    {genres.map((g) => (<option value={g.name}>{g.name}</option>))}
+                    <option default>All</option>
+                    {genres.map((g, i) => (<option value={g.name} key={i}>{g.name}</option>))}
                 </select>
             </div>
             <div>

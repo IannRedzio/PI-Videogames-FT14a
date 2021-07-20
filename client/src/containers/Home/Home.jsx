@@ -17,7 +17,7 @@ export default function Home() {
     useEffect(() => {
         dispatch(resetAll());
         dispatch(getVideogames());
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [dispatch]); 
 
     let allVideogames;
     filterBy === "All" && orderBy === "Select" ? (allVideogames = videogames) : (allVideogames = filteredVideogames);

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.information1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "imagedetail left";
+  grid-gap: 0.2rem;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  align-items:center;
+}
+
+
+.imageDetail1 img{
+  grid-area: image;
+  border-radius: 10px;
+  width: 70%;
+  margin: auto;
+}
+
+.imageDetail1 {
+  grid-area: imagedetail;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas:
+    "image"
+    "derabajo"
+}
+.description1 {
+  margin: auto;
+  padding: 20px;
+}
+
+.derabajo1{
+  grid-area: derabajo;
+}
+
+.details1 {
+  grid-area: left;
+  margin: auto;
+}
+
+.genres {
+  margin: auto;
+}
+
+
+
+.return {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 120%;
+  border: solid 1px white;
+  border-radius: 20px;
+  background: none;
+}
+
+.return:hover {
+  cursor: pointer;
+  font-size: 125%;
+  text-shadow: 0 0 5px #fff;
+}

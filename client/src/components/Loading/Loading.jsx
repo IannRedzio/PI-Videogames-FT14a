@@ -6,7 +6,7 @@ export default function Loading() {
     <div>
       <img
         className="loading"
-        src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"
+        src="https://flevix.com/wp-content/uploads/2019/07/Line-Preloader.gif"
         alt="cargando"
       />
     </div>

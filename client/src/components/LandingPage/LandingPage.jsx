@@ -4,8 +4,8 @@ import "./LandingPage.css";
 
 export default function LandingPage() {
   return (
-    <div class="background">
-      <div class="title">
+    <div className="background">
+      <div className="title">
         <h2>Henry Videogames!</h2>
         <Link to="/home">
         <button type="submit">Enter</button>

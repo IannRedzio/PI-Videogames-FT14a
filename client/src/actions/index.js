@@ -135,14 +135,32 @@ export const orderDesc = (type) => (dispatch, getState) => {
 };
   
 export const orderByCreator = (source) => (dispatch, getState) => {
-    const videogames = getState().videogames.filter(function (G) {
-      return G.source === source;
-    });
-    dispatch({
+    const videogames = getState().videogames
+    if(source === "CREATED") {
+      let filtered = []
+      videogames.map(videogame => {
+      if(typeof videogame.id !== 'number'){
+      filtered.push(videogame)
+    }})
+    return dispatch({
       type: "ORDER_BY_CREATOR",
       payload: {
-        videogames,
+        videogames: filtered,
         source,
       },
     });
+    } else {
+      let filtered = []
+      videogames.map(videogame => {
+      if(typeof videogame.id !== 'number'){
+      filtered.push(videogame)
+    }})
+    return dispatch({
+      type: "ORDER_BY_CREATOR",
+      payload: {
+        videogames: filtered,
+        source,
+      },
+    });
+    }
 };

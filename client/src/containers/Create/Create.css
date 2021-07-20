@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'PT', sans-serif;
+}
+
+.form{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 800px;
+    width: 1000px;
+    background-color: rgba(255, 255, 255, 0.088);
+    padding: 5px;
+    margin-bottom: 120px;
+    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.313);
+}
+
+.titles{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.label{
+    width: 145px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: none;
+    margin: 5px;
+}
+
+.label:hover{
+    cursor: pointer;
+}
+
+.imageURL{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.imageLink{
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: none;
+    margin: 5px;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 900px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.checkboxs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.checkboxs input:hover {
+    cursor: pointer;
+}
+
+.button{
+    color: rgba(238, 229, 229, 0.986);
+    font-size: 100%;
+    border: solid 1px white;
+    border-radius:20px;
+    background:none;
+}
+
+.button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    font-size: 115%;
+    transform-origin: center;
+    text-shadow: 0 0 5px #fff,
+}

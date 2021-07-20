@@ -1,6 +1,6 @@
 .App {
-  background: rgb(2,0,41);
-   background: linear-gradient(117deg, rgba(2,0,41,1) 0%, rgba(4,62,92,1) 0%, rgba(5,123,142,1) 45%, rgba(5,123,142,1) 93%);
+  background: rgb(6,3,64);
+  background: linear-gradient(117deg, rgba(6,3,64,1) 0%, rgba(5,119,140,1) 25%, rgba(5,123,142,1) 75%, rgba(7,20,82,1) 100%);
   text-align: center;
   background-size: cover;
   min-height: 100vh;
