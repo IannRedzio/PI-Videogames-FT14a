@@ -20,6 +20,9 @@ module.exports = (sequelize) => {
     released: {
       type: DataTypes.DATEONLY,
     },
+    image:{
+      type: DataTypes.TEXT,
+    },
     platforms: {
       type: DataTypes.STRING,
       allowNull: false,

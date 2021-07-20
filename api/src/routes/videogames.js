@@ -29,7 +29,8 @@ router.get("/", async function(req, res) {
             })
             let totalAPI = [];
             for(let i = 1; i < 4; i++) {
-                let apiGames = await axios.get(`https://api.rawg.io/api/games?search=${name}&key=${key}&page_size=33&page=${i}`);
+                try {
+                  let apiGames = await axios.get(`https://api.rawg.io/api/games?search=${name}&key=${key}&page_size=33&page=${i}`);
                 apiGames.data.results.map((X) => {
                     var game = {
                         id: X.id,
@@ -39,7 +40,10 @@ router.get("/", async function(req, res) {
                         genres: X.genres && X.genres.map((p) => p.name).filter((p) => p !== null).join(", "),
                     };
                     totalAPI.push(game);
-                });
+                });  
+                } catch (err) {
+                    console.log("error en for", i);
+                }
             }
             let concatGames = [...gamesDBResults, ...totalAPI]
             res.json(concatGames);
@@ -68,7 +72,7 @@ router.get("/", async function(req, res) {
             res.json(gamesResults);
         }
     } catch(err) {
-        res.status(404).json({ err });
+        res.status(400).json({err});
     }
 })
 
